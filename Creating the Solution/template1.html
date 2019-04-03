@@ -1,0 +1,159 @@
+ !DOCTYPE html>
+<html> 
+<head>
+<link href="https://fonts.googleapis.com/css?family=Heebo" rel="stylesheet">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  font-family: "Heebo", sans-serif; margin:0;
+}
+
+.sidenav {
+  height: 100%;
+  width: 168px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #f99d26;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+.sidenav a {
+  border: solid 1px;
+  border-color: #f99d26;
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #080606;
+  display: block;
+}
+
+.sidenav a:hover {
+  color: #ffffff;
+}
+
+.main {
+  margin-left: 160px; /* Same as the width of the sidenav */
+  font-size: 24px; /* Increased text to enable scrolling */
+  padding: 0px 10px;
+  background-color: #ffffff;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+/* Style the header */
+.header {
+  padding: 10px 16px;
+  background: #5cacd4ff;
+  color: #f1f1f1;
+}
+
+/* Page content */
+.content {
+  padding: 16px;
+}
+
+/* The sticky class is added to the header with JS when it reaches its scroll position */
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%
+}
+
+/* Add some top padding to the page content to prevent sudden quick movement (as the header gets a new position at the top of the page (position:fixed and top:0) */
+.sticky + .content {
+  padding-top: 102px;
+}
+
+.flip-box {
+    background-color: transparent;
+    width: 300px;
+    height: 300px;
+    perspective: 1000px;
+  }
+
+  .flip-box-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
+
+  .flip-box:hover .flip-box-inner {
+    transform: rotateY(180deg);
+  }
+
+  .flip-box-front, .flip-box-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+  }
+
+  .flip-box-front {
+    background-color: #bbb;
+    color: black;
+  }
+
+  .flip-box-back {
+    background-color: #ffffff;
+    color: white;
+    transform: rotateY(180deg);
+  }
+
+</style>
+</head>
+<body>
+
+
+<div class="sidenav">
+  <a href="#about">About</a>
+  <a href="#survey">Survey</a>
+  <a href="#donatet=">Donate</a>
+  <a href="#contact">Contact</a>
+</div>
+
+<div class="main"> 
+
+    <div class="header" id="myHeader">
+  <h2>Sustainable Cities and Communities</h2>
+</div>
+
+  
+
+  <p>The greater part of the total population presently live in urban regions. By 2050, that figure will have ascended to 6.5 billion individuals – 66% of all humankind. Maintainable advancement can't be accomplished without altogether changing the manner in which we assemble and deal with our urban spaces. 
+
+
+</p>
+  
+<div class="flex-container">
+   <img src="sdg-cover-11.jpg" alt="Sustainable Cities and Communities" width="310" height="245">
+  <img src="cars.gif" alt="Car gif" width="310" height="245">
+  <img src="busystreets.gif" alt="Street gif" width="310" height="245">
+  <img src="pollution.gif" alt="Pollution gif" width="310" height="245">
+</div>
+
+
+<div class="header" id="myHeader">
+  <h2>Questions and Stats</h2>
+</div>
+
+<div class="flip-box">
+    <div class="flip-box-inner">
+      <div class="flip-box-front">
+       <img src="images/E_SDG goals_11.png" alt="Avatar" style="width:300px; height:300px;"/>
+      </div>
+      <div class="flip-box-back" style="background-color: #f99d26">
+        <h3>Sustainable Cities and Communities</h3>
+        <p>How can city governments help accomodate the rising population?</p>
+      </div>
+    </div>
+  </div>
+
